@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="FitLife - Your Personalized Fitness App with Workout Plans, Nutrition Tracking, and a Community of Fitness Enthusiasts.">
+    <title>FitLife - Your Fitness Companion</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.1/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .container {
+            max-width: 1024px;
+        }
+
+        section {
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 0;
+        }
+
+        nav ul li a {
+        transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+        color: #FFB74D; 
+        }
+
+        .swiper {
+            width: 100%;
+            height: auto;
+        }
+
+        .section-content {
+            width: 100%;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .bg-primary {
+            background-color: #1D4D4F;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .bg-primary:hover {
+            background-color: #FFB74D;
+            color: #fff;
+        }
+
+        .bg-secondary {
+            background-color: #A8E6CF;
+        }
+
+        .bg-accent {
+            background-color: #FFB74D;
+        }
+
+        .text-primary {
+            color: #1D4D4F;
+        }
+
+        .text-secondary {
+            color: #A8E6CF;
+        }
+
+        .text-accent {
+            color: #FFB74D;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-900">
+
+    <!-- Navbar and Hero Section -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50" aria-label="Main Navigation">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-primary">FitLife</a>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#features" class="hover:text-accent" aria-label="Features">Features</a></li>
+                <li><a href="#testimonials" class="hover:text-accent" aria-label="Testimonials">Testimonials</a></li>
+                <li><a href="#pricing" class="hover:text-accent" aria-label="Pricing">Pricing</a></li>
+                <li><a href="#faq" class="hover:text-accent" aria-label="FAQ">FAQ</a></li>
+                <li><a href="#cta" class="hover:text-accent" aria-label="Get Started">Get Started</a></li>
+            </ul>
+            <a href="#cta" class="md:hidden bg-primary text-white px-4 py-2 rounded">Join Now</a>
+        </div>
+    </nav>
+
+    <section class="bg-secondary flex items-center justify-center" id="hero">
+        <div class="text-center container mx-auto section-content">
+            <h1 class="text-4xl md:text-5xl font-bold text-primary">Transform Your Fitness Journey with FitLife</h1>
+            <p class="mt-4 text-lg text-gray-600">Personalized workout plans, nutrition tracking, and a community of
+                fitness enthusiasts at your fingertips.</p>
+            <a href="#cta"
+                class="mt-8 inline-block bg-primary text-white px-6 py-3 rounded-md shadow-lg hover:bg-accent">Get
+                Started Now</a>
+            <img src="assets/class-1.jpg" alt="FitLife App Mockup" class="mx-auto mt-10 w-full md:w-1/2 h-auto" />
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="bg-white">
+        <div class="container mx-auto text-center section-content">
+            <h2 class="text-3xl font-bold text-gray-800">Key Features</h2>
+            <p class="mt-4 text-gray-600">Discover the unique features that make FitLife your ultimate fitness
+                companion.</p>
+            <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-lg">
+                    <div class="text-4xl text-primary mb-4">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-700">Personalized Workout Plans</h3>
+                    <p class="mt-2 text-gray-600">Get workout plans tailored to your fitness level and goals.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-lg">
+                    <div class="text-4xl text-primary mb-4">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-700">Community Support</h3>
+                    <p class="mt-2 text-gray-600">Connect with fellow fitness enthusiasts and share your journey.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-lg">
+                    <div class="text-4xl text-primary mb-4">
+                        <i class="fas fa-apple-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-700">Nutrition Tracking</h3>
+                    <p class="mt-2 text-gray-600">Track your meals and make informed dietary choices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Carousel Section -->
+    <section id="testimonials" class="bg-white flex items-center justify-center">
+        <div class="container text-center section-content">
+            <h2 class="text-3xl font-bold text-gray-800">What Our Users Say</h2>
+            <div class="swiper mt-10">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide p-6 bg-gray-100 rounded-lg shadow-lg">
+                        <img src="assets/Client1.svg" alt="User 1" class="mx-auto h-16 w-16 rounded-full mb-4">
+                        <p class="text-gray-600">"FitLife helped me stay on track with my workouts and diet. I've never
+                            felt better!"</p>
+                        <h3 class="mt-4 font-semibold">John Doe</h3>
+                    </div>
+                    <div class="swiper-slide p-6 bg-gray-100 rounded-lg shadow-lg">
+                        <img src="assets/Client2.svg" alt="User 2" class="mx-auto h-16 w-16 rounded-full mb-4">
+                        <p class="text-gray-600">"The personalized workout plans are amazing. It’s like having a
+                            personal trainer in my pocket!"</p>
+                        <h3 class="mt-4 font-semibold">Jane Smith</h3>
+                    </div>
+                    <div class="swiper-slide p-6 bg-gray-100 rounded-lg shadow-lg">
+                        <img src="assets/Client3.svg" alt="User 3" class="mx-auto h-16 w-16 rounded-full mb-4">
+                        <p class="text-gray-600">"FitLife's community kept me motivated to stay consistent with my
+                            goals."</p>
+                        <h3 class="mt-4 font-semibold">Emily Johnson</h3>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Plan Section -->
+    <section id="pricing" class="bg-secondary flex items-center justify-center">
+        <div class="container text-center section-content">
+            <h2 class="text-3xl font-bold text-gray-800">Choose Your Plan</h2>
+            <div class="mt-10 grid gap-8 md:grid-cols-3">
+                <div class="p-6 bg-white rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-gray-700">Free Plan</h3>
+                    <p class="mt-4 text-gray-600">Access basic features for free.</p>
+                    <p class="mt-6 text-primary font-bold text-2xl">Free</p>
+                    <a href="#"
+                        class="mt-8 inline-block bg-primary text-white px-6 py-3 rounded-md shadow-lg hover:bg-accent">Get
+                        Started</a>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-gray-700">Pro Plan</h3>
+                    <p class="mt-4 text-gray-600">All features unlocked, including advanced tracking and community
+                        support.</p>
+                    <p class="mt-6 text-primary font-bold text-2xl">$19.99/month</p>
+                    <a href="#"
+                        class="mt-8 inline-block bg-primary text-white px-6 py-3 rounded-md shadow-lg hover:bg-accent">Get
+                        Pro</a>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold text-gray-700">Premium Plan</h3>
+                    <p class="mt-4 text-gray-600">Exclusive content, priority support, and personal coaching options.
+                    </p>
+                    <p class="mt-6 text-primary font-bold text-2xl">$29.99/month</p>
+                    <a href="#"
+                        class="mt-8 inline-block bg-primary text-white px-6 py-3 rounded-md shadow-lg hover:bg-accent">Go
+                        Premium</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section with Accordion -->
+    <section id="faq" class="bg-gray-50 flex items-center justify-center">
+        <div class="container text-center section-content">
+            <h2 class="text-3xl font-bold text-gray-800">Frequently Asked Questions</h2>
+            <div class="mt-8 max-w-3xl mx-auto space-y-4">
+                <div class="bg-white shadow-lg rounded-lg p-4">
+                    <button class="w-full text-left text-lg font-semibold text-gray-800" onclick="toggleFAQ('faq1')"
+                        aria-expanded="false" aria-controls="faq1">
+                        What is FitLife and how does it work?
+                    </button>
+                    <div id="faq1" class="mt-2 hidden text-gray-600">
+                        FitLife is a personalized fitness app that offers tailored workout plans, nutrition tracking,
+                        and access to a supportive fitness community. You can track your progress and stay motivated
+                        with features designed to help you reach your fitness goals.
+                    </div>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg p-4">
+                    <button class="w-full text-left text-lg font-semibold text-gray-800" onclick="toggleFAQ('faq2')"
+                        aria-expanded="false" aria-controls="faq2">
+                        Is there a free version available?
+                    </button>
+                    <div id="faq2" class="mt-2 hidden text-gray-600">
+                        Yes, FitLife offers a free version with basic features. You can upgrade to a Pro or Premium plan
+                        for more advanced features like personalized coaching, community support, and detailed nutrition
+                        tracking.
+                    </div>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg p-4">
+                    <button class="w-full text-left text-lg font-semibold text-gray-800" onclick="toggleFAQ('faq3')"
+                        aria-expanded="false" aria-controls="faq3">
+                        Can I cancel my subscription at any time?
+                    </button>
+                    <div id="faq3" class="mt-2 hidden text-gray-600">
+                        Yes, you can cancel your subscription anytime through the app settings or by contacting customer
+                        support.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call-to-Action Section -->
+    <section id="cta" class="bg-green-900 flex items-center justify-center py-16">
+        <div class="container text-center section-content text-white">
+            <h2 class="text-3xl font-bold">Ready to Transform Your Fitness Journey?</h2>
+            <p class="mt-4 text-lg">Join FitLife today and take the first step towards a healthier you.</p>
+            <a href="#"
+                class="mt-8 inline-block bg-white text-primary font-semibold px-6 py-3 rounded-md shadow-lg hover:bg-gray-100">
+                Get Started Now
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 py-10">
+        <div class="container mx-auto text-center text-white section-content">
+            <div class="mb-6">
+                <a href="#" class="text-2xl font-bold text-primary">FitLife</a>
+            </div>
+            <div class="mb-6 space-x-4">
+                <a href="#" class="text-xl text-white hover:text-gray-400"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-xl text-white hover:text-gray-400"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-xl text-white hover:text-gray-400"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p class="text-gray-400">&copy; 2024 FitLife. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- GSAP & ScrollTrigger for animations & Swiper for Carousel-->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            gsap.registerPlugin(ScrollTrigger);
+
+            gsap.utils.toArray("section").forEach((section) => {
+                gsap.from(section, {
+                    opacity: 0,
+                    y: 50,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 80%",
+                        end: "top 50%",
+                        toggleActions: "play none none none"
+                    }
+                });
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            new Swiper('.swiper', {
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                autoplay: {
+                    delay: 5000,
+                },
+            });
+        });
+
+        function toggleFAQ(id) {
+            const faq = document.getElementById(id);
+            faq.classList.toggle('hidden');
+            if (!faq.classList.contains('hidden')) {
+                gsap.from(faq, {
+                    height: 0,
+                    duration: 0.3,
+                    ease: "power1.inOut",
+                    onComplete: () => {
+                        gsap.to(faq, { height: "auto", duration: 0.2 });
+                    }
+                });
+            } else {
+                gsap.to(faq, {
+                    height: 0,
+                    duration: 0.3,
+                    ease: "power1.inOut"
+                });
+            }
+        }
+    </script>
+</body>
+</html>
